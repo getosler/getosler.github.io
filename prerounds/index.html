@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osler Prerounds</title>
+    <meta
+      name="description"
+      content="A local-first prerounding workspace built for fast daily updates, problem-based planning, and printable one-page patient notes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-glow"></div>
+    <header class="site-header">
+      <div class="brand">
+        <img class="brand-logo" src="./images/appicon-hero.png" alt="" />
+        <span class="brand-text">Osler Prerounds</span>
+      </div>
+      <a class="header-link" href="https://getosler.com" target="_blank" rel="noreferrer"
+        >Download</a
+      >
+    </header>
+
+    <main>
+      <section class="hero section">
+        <img
+          class="hero-logo"
+          src="./images/appicon-hero.png"
+          alt="Osler Prerounds app icon"
+        />
+        <h1>Osler Prerounds</h1>
+        <p class="hero-copy">
+          A flexible tool for clinicians to track multiple patients and
+          evolving clinical plans in one place, with fully local storage and a
+          privacy-first workflow.
+        </p>
+        <figure class="hero-image card">
+          <img
+            src="./images/patient_view.png"
+            alt="Patient sheet view with top clinical grid and problem-based table"
+          />
+        </figure>
+      </section>
+
+      <section class="section feature-block">
+        <article class="feature">
+          <figure class="card">
+            <img
+              src="./images/home_screen.png"
+              alt="All Patients dashboard showing patient cards and quick actions"
+            />
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">Dashboard</p>
+            <h2>One command center for all your patients</h2>
+            <p>
+              Open your vault, add patients, archive completed cases, print all
+              active prerounds, and move through the day from one dashboard.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="card">
+            <img
+              src="./images/task_list_patient.png"
+              alt="Patient sheet with right-side tasks panel"
+            />
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">Tasks</p>
+            <h2>Track tasks alongside your note</h2>
+            <p>
+              As you prechart, tasks automatically appear in the sidebar. Check
+              them off throughout the day, and those updates reflect directly in
+              your prechart notes.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="card">
+            <img
+              src="./images/all_tasks.png"
+              alt="All Tasks modal combining checkbox tasks from active patients"
+            />
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">Run the List</p>
+            <h2>Get one dashboard for all tasks across your patients</h2>
+            <p>
+              When running the list, you can pull up all your to-dos across all
+              active patients in one place.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="card">
+            <img
+              src="./images/quick_switch.png"
+              alt="Quick switcher overlay for jumping between patients"
+            />
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">Keyboard speed</p>
+            <h2>Jump between patients in seconds</h2>
+            <p>
+              Use the Quick Switcher (<code>Cmd/Ctrl + Shift + P</code>) to
+              search and open any patient instantly, with no dashboard detour.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="card">
+            <img
+              src="./images/dark_mode.png"
+              alt="Dark mode patient sheet optimized for low-light work"
+            />
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">Privacy-First Data Storage</p>
+            <h2>All patient data stays 100% local and where you want it</h2>
+            <p>
+              Your vault lives in a folder you choose, so you control where
+              notes, archives, and exports are stored. Nothing leaves your
+              device unless you explicitly move it.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section compact-grid">
+        <article class="mini-card">
+          <h3>Portable by default</h3>
+          <p>
+            Data lives in a vault you control as JSON files with dedicated
+            folders for active notes, archive, and print exports.
+          </p>
+        </article>
+        <article class="mini-card">
+          <h3>Designed to think in problems</h3>
+          <p>
+            The patient sheet mirrors your clinical mental model: presentation,
+            physical, labs, then parallel problem columns for today and future
+            plans.
+          </p>
+        </article>
+        <article class="mini-card">
+          <h3>Print rounds-ready PDFs</h3>
+          <p>
+            Export all active patients to landscape US Letter, one patient per
+            page, with compact output and minimal margin assumptions.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+      <button
+        class="lightbox-close"
+        type="button"
+        aria-label="Close image preview"
+        id="lightbox-close"
+      >
+        ×
+      </button>
+      <img id="lightbox-image" alt="" />
+    </div>
+
+    <footer class="site-footer">
+      <p>
+        Osler Prerounds /
+        <span>by Sam Rawal, MD</span>
+        /
+        <a href="https://samrawal.com" target="_blank" rel="noreferrer">samrawal.com</a>
+        /
+        <a href="https://x.com/samarthrawal" target="_blank" rel="noreferrer">@samarthrawal</a>
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

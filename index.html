@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Manrope:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -54,15 +54,18 @@
 
       h1 {
         margin: 0;
-        font-family: "Space Grotesk", sans-serif;
+        font-family: "Lora", serif;
+        font-weight: 600;
         font-size: clamp(2.2rem, 6vw, 4rem);
-        letter-spacing: -0.04em;
+        letter-spacing: -0.01em;
+        line-height: 1;
       }
 
       .subheader {
         margin: 14px auto 0;
-        max-width: 44ch;
-        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+        max-width: none;
+        font-size: clamp(0.95rem, 1.8vw, 1.18rem);
+        white-space: nowrap;
         color: var(--muted);
       }
 
@@ -203,6 +206,14 @@
           padding-top: 42px;
         }
 
+        h1 {
+          font-size: clamp(2.7rem, 10vw, 3.4rem);
+        }
+
+        .subheader {
+          font-size: 1.08rem;
+        }
+
         .product-card {
           grid-template-columns: 1fr;
         }
@@ -238,7 +249,7 @@
     <main>
       <header class="hero">
         <h1>Osler</h1>
-        <p class="subheader">copilots for clinical reasoning.</p>
+        <p class="subheader">Workspaces for clinical reasoning</p>
       </header>
 
       <section class="products" aria-label="Osler products">

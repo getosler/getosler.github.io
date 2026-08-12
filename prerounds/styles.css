@@ -290,6 +290,18 @@ img {
   order: 1;
 }
 
+.feature-video {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+
+.feature-video:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+}
+
+.feature-video > figure {
+  margin: 0;
+}
+
 .feature-copy h2 {
   margin-top: 0.5rem;
   font-size: clamp(1.4rem, 2.2vw, 1.95rem);

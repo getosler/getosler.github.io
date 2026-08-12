@@ -21,6 +21,64 @@ const observer = new IntersectionObserver(
 
 revealTargets.forEach((element) => observer.observe(element));
 
+const featureVideos = document.querySelectorAll(".feature video");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const videoVisibility = new Map();
+
+const resetVideo = (video) => {
+  video.pause();
+  if (video.currentTime !== 0) {
+    video.currentTime = 0;
+  }
+};
+
+const updateActiveVideo = () => {
+  let activeVideo = null;
+  let activeRatio = 0.2;
+
+  if (!prefersReducedMotion.matches && !document.hidden) {
+    videoVisibility.forEach((ratio, video) => {
+      if (ratio > activeRatio) {
+        activeVideo = video;
+        activeRatio = ratio;
+      }
+    });
+  }
+
+  featureVideos.forEach((video) => {
+    if (video === activeVideo) {
+      video.play().catch(() => {
+        resetVideo(video);
+      });
+    } else {
+      resetVideo(video);
+    }
+  });
+};
+
+const videoObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      videoVisibility.set(entry.target, entry.isIntersecting ? entry.intersectionRatio : 0);
+    });
+
+    updateActiveVideo();
+  },
+  {
+    threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
+    rootMargin: "80px 0px"
+  }
+);
+
+featureVideos.forEach((video) => {
+  videoVisibility.set(video, 0);
+  resetVideo(video);
+  videoObserver.observe(video);
+});
+
+prefersReducedMotion.addEventListener("change", updateActiveVideo);
+document.addEventListener("visibilitychange", updateActiveVideo);
+
 const lightbox = document.getElementById("image-lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxClose = document.getElementById("lightbox-close");

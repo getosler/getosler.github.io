@@ -243,6 +243,14 @@ h1 {
   cursor: zoom-in;
 }
 
+.feature .card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .hero-image {
   margin: 1.35rem auto 0;
   max-width: 980px;

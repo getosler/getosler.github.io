@@ -252,6 +252,10 @@ h1 {
   object-fit: cover;
 }
 
+.hero-image video {
+  object-fit: contain;
+}
+
 .hero-image {
   margin: 1.35rem auto 0;
   max-width: 980px;

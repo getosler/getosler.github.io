@@ -243,6 +243,7 @@ h1 {
   cursor: zoom-in;
 }
 
+.hero-image video,
 .feature .card video {
   display: block;
   width: 100%;
